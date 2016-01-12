@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/2dotstwice/silex-feature-toggles-provider.svg?branch=master)](https://travis-ci.org/2dotstwice/silex-feature-toggles-provider)
+
 # Installation
 
 ## Service provider
