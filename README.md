@@ -34,10 +34,12 @@ The contents of _config.yml_ might look like this:
  
 ```yaml
 toggles:
-  - name: profile-date-of-birth
+  profile-date-of-birth:
+    name: profile-date-of-birth
     conditions: {}
     status: always-active
-  - name: remember-password-option
+  remember-password-option:
+    name: remember-password-option
     conditions: {}
     status: inactive
 ```
