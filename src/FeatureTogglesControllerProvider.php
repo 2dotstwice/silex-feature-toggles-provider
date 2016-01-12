@@ -40,5 +40,4 @@ class FeatureTogglesControllerProvider implements ControllerProviderInterface
 
         return $controllers;
     }
-
 }
