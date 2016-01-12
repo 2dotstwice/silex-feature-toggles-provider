@@ -5,6 +5,7 @@
 
 namespace TwoDotsTwice\SilexFeatureToggles;
 
+use Qandidate\Toggle\Context;
 use Qandidate\Toggle\Serializer\InMemoryCollectionSerializer;
 use Qandidate\Toggle\ToggleManager;
 use Silex\Application;
@@ -33,8 +34,18 @@ class FeatureTogglesProvider implements ServiceProviderInterface
     {
         $config = $this->config;
 
+        // Global context for feature toggles. You can add to this context from
+        // your own middlewares, by extending the service, etc.
+        $app['toggles.context'] = $app->share(
+            function () {
+                return new Context();
+            }
+        );
+
+        // The feature toggles manager which can be asked for the current state
+        // of feature toggles.
         $app['toggles'] = $app->share(
-            function (Application $app) use ($config) {
+            function () use ($config) {
                 $serializer = new InMemoryCollectionSerializer();
                 $collection = $serializer->deserialize($config);
 
