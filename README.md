@@ -45,7 +45,7 @@ toggles:
 ```
 
 For details on the configuration semantics, consult the documentation of Qandidate's
-(Toggle library)[https://github.com/qandidate-labs/qandidate-toggle].
+[Toggle library](https://github.com/qandidate-labs/qandidate-toggle).
 
 ## Tiny REST API
 
